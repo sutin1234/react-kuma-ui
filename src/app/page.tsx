@@ -1,7 +1,6 @@
-
+import Image from 'next/image'
 import styles from './page.module.css'
-import {Button, Text} from "@kuma-ui/core";
-import Image from "next/image";
+import { Text } from "@kuma-ui/core";
 
 export default function Home() {
   return (
@@ -14,10 +13,23 @@ export default function Home() {
         <Text color="yellow" fontSize="16px" fontWeight="bold">
           Hello world
         </Text>
-        <Button p={8} bg="blue" color="white" borderRadius={6}>
-          Click me
-        </Button>
-
+        <div>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            By{' '}
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className={styles.vercelLogo}
+              width={100}
+              height={24}
+              priority
+            />
+          </a>
+        </div>
       </div>
 
       <div className={styles.center}>
